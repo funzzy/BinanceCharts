@@ -2,82 +2,272 @@
 <html lang="ru">
 
 	<title>Фьючерсы 15мин ОБЗОР</title>
+ <!--
+ 00___CONTAINER_pairs___00
 
-	<style>
+ container1
+ BTC
+ ETH
 
-	body{
-	 background-color: #171B26; /* Цвет фона веб-страницы */
-	}
+ container2
+ BNB
+ ADA
 
-	#chart {
-	width:900px;
-	margin:0 auto;
-	background: url("faux-columns.png") repeat-y;
-	overflow: hidden;
-	}
+ container3
+ XRP
+ LTC
+
+ container4
+ BCH
+ EOS
+
+ container5
+ TRX
+ ETC
+
+ container6
+ LINK
+ XLM
+
+ container7
+ DASH
+ DOGE
+
+ container8
+ DOTU
+ UNI
+
+ container9
+ SXP
+ SUSHI
+
+ container10
+ FTM
+ NEO
+
+ container11
+ ONT
+ AAVE
+
+ container12
+ IOST
+ MKR
+
+ container13
+ AVAX
+ IOTA
+
+-->
+<style>
+
+	 body{
+	   background-color: #171B26; /* Цвет фона веб-страницы */
+	   }
+
+	 #chart
+	 {
+	 width:900px;
+	 margin:0 auto;
+	 background: url("faux-columns.png") repeat-y;
+	 overflow: hidden;
+	 }
 
 	#container1 {
-width:900px;
-margin:0 auto;
-background: url("faux-columns.png") repeat-y;
-overflow: hidden;
-}
-#leftbar1 {
-float:left;
-width:450px;
-}
-#rightbar1 {
-float:left;
-width:450px;width="число"
-}
+ width:900px;
+ margin:0 auto;
+ background: url("faux-columns.png") repeat-y;
+ overflow: hidden;
+ }
+ #leftbar1 {
+ float:left;
+ width:450px;
+ }
+ #rightbar1 {
+ float:left;
+ width:450px;width="число"
+ }
 
-#container2 {
-width:900px;
-margin:0 auto;
-background: url("faux-columns.png") repeat-y;
-overflow: hidden;
-}
-#leftbar2 {
-float:left;
-width:450px;
-}
+ #container2 {
+ width:900px;
+ margin:0 auto;
+ background: url("faux-columns.png") repeat-y;
+ overflow: hidden;
+ }
+ #leftbar2 {
+ float:left;
+ width:450px;
+ }
+ #rightbar2 {
+ float:left;
+ width:450px;
+ }
 
-#rightbar2 {
-float:left;
-width:450px;
-}
+ #container3 {
+ width:900px;
+ margin:0 auto;
+ background: url("faux-columns.png") repeat-y;
+ overflow: hidden;
+ }
+ #leftbar3 {
+ float:left;
+ width:450px;
+ }
+ #rightbar3 {
+ float:left;
+ width:450px;
+ }
 
-#container3 {
-width:900px;
-margin:0 auto;
-background: url("faux-columns.png") repeat-y;
-overflow: hidden;
-}
-#leftbar3 {
-float:left;
-width:450px;
-}
-#rightbar3 {
-float:left;
-width:450px;
-}
+ #container4 {
+ width:900px;
+ margin:0 auto;
+ background: url("faux-columns.png") repeat-y;
+ overflow: hidden;
+ }
+ #leftbar4 {
+ float:left;
+ width:450px;
+ }
+ #rightbar4 {
+ float:left;
+ width:450px;
+ }
 
-#container4 {
-width:900px;
-margin:0 auto;
-background: url("faux-columns.png") repeat-y;
-overflow: hidden;
-}
-#leftbar4 {
-float:left;
-width:450px;
-}
-#rightbar4 {
-float:left;
-width:450px;
-}
+ #container5 {
+ width:900px;
+ margin:0 auto;
+ background: url("faux-columns.png") repeat-y;
+ overflow: hidden;
+ }
+ #leftbar5 {
+ float:left;
+ width:450px;
+ }
+ #rightbar5 {
+ float:left;
+ width:450px;
+ }
 
-	  </style>
+ #container6 {
+ width:900px;
+ margin:0 auto;
+ background: url("faux-columns.png") repeat-y;
+ overflow: hidden;
+ }
+ #leftbar6 {
+ float:left;
+ width:450px;
+ }
+ #rightbar6 {
+ float:left;
+ width:450px;
+ }
+
+ #container7 {
+ width:900px;
+ margin:0 auto;
+ background: url("faux-columns.png") repeat-y;
+ overflow: hidden;
+ }
+ #leftbar7 {
+ float:left;
+ width:450px;
+ }
+ #rightbar7 {
+ float:left;
+ width:450px;
+ }
+
+ #container8 {
+ width:900px;
+ margin:0 auto;
+ background: url("faux-columns.png") repeat-y;
+ overflow: hidden;
+ }
+ #leftbar8 {
+ float:left;
+ width:450px;
+ }
+ #rightbar8 {
+ float:left;
+ width:450px;
+ }
+
+ #container9 {
+ width:900px;
+ margin:0 auto;
+ background: url("faux-columns.png") repeat-y;
+ overflow: hidden;
+ }
+ #leftbar9 {
+ float:left;
+ width:450px;
+ }
+ #rightbar9 {
+ float:left;
+ width:450px;
+ }
+
+ #container10 {
+ width:900px;
+ margin:0 auto;
+ background: url("faux-columns.png") repeat-y;
+ overflow: hidden;
+ }
+ #leftbar10 {
+ float:left;
+ width:450px;
+ }
+ #rightbar10 {
+ float:left;
+ width:450px;
+ }
+
+ #container11 {
+ width:900px;
+ margin:0 auto;
+ background: url("faux-columns.png") repeat-y;
+ overflow: hidden;
+ }
+ #leftbar11 {
+ float:left;
+ width:450px;
+ }
+ #rightbar11 {
+ float:left;
+ width:450px;
+ }
+
+ #container12 {
+ width:900px;
+ margin:0 auto;
+ background: url("faux-columns.png") repeat-y;
+ overflow: hidden;
+ }
+ #leftbar12 {
+ float:left;
+ width:450px;
+ }
+ #rightbar12 {
+ float:left;
+ width:450px;
+ }
+
+ #container13 {
+ width:900px;
+ margin:0 auto;
+ background: url("faux-columns.png") repeat-y;
+ overflow: hidden;
+ }
+ #leftbar13 {
+ float:left;
+ width:450px;
+ }
+ #rightbar13 {
+ float:left;
+ width:450px;
+ }
+
+</style>
 
 </head>
 
@@ -107,50 +297,50 @@ width:450px;
 			  "hide_legend": true,
 			  "save_image": false,
 			  "container_id": "tradingview_d195f"
-			}
+			  }
 			  );
 			  </script>
-			</div>
-			<!-- TradingView Widget END -->
-	  </div>
+			 </div>
+			 <!-- TradingView Widget END -->
+	     </div>
 
-		<div id="rightbar2">
-			<!-- TradingView Widget BEGIN -->
-	<div class="tradingview-widget-container">
-	  <div id="tradingview_31771"></div>
-	  <div class="tradingview-widget-copyright"><a  rel="noopener" target="_blank"><span class="blue-text">ETHUSDT</span></a></div>
-	  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-	  <script type="text/javascript">
-	  new TradingView.widget(
-	  {
-	  "width": 450,
-	  "height": 300,
-	  "symbol": "BINANCE:ETHUSDTPERP",
-	  "interval": "15",
-	  "timezone": "Etc/UTC",
-	  "theme": "dark",
-	  "style": "1",
-	  "locale": "ru",
-	  "toolbar_bg": "#f1f3f6",
-	  "enable_publishing": false,
-	  "hide_top_toolbar": true,
-	  "hide_legend": true,
-	  "save_image": false,
-	  "container_id": "tradingview_31771"
-	}
-	  );
-	  </script>
-	</div>
-	<!-- TradingView Widget END -->
-		  </div>
-	</div>
+		    <div id="rightbar1">
+		   	<!-- TradingView Widget BEGIN -->
+     	<div class="tradingview-widget-container">
+	    <div id="tradingview_31771"></div>
+	    <div class="tradingview-widget-copyright"><a  rel="noopener" target="_blank"><span class="blue-text">ETHUSDT</span></a></div>
+	    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+	    <script type="text/javascript">
+	    new TradingView.widget(
+	    {
+	    "width": 450,
+  	  "height": 300,
+  	  "symbol": "BINANCE:ETHUSDTPERP",
+	    "interval": "15",
+	    "timezone": "Etc/UTC",
+  	  "theme": "dark",
+	    "style": "1",
+	    "locale": "ru",
+  	  "toolbar_bg": "#f1f3f6",
+	    "enable_publishing": false,
+	    "hide_top_toolbar": true,
+	    "hide_legend": true,
+	    "save_image": false,
+	    "container_id": "tradingview_31771"
+         	}
+	          );
+	             </script>
+	            </div>
+             	<!-- TradingView Widget END -->
+	           	  </div>
+      	</div>
 
-	<hr color="#2D4BAB" width="900px">
+<hr color="#2D4BAB" width="900px">
 
-<div id="container2">
-	<div id="leftbar2">
-		<!-- TradingView Widget BEGIN -->
-		<div class="tradingview-widget-container">
+  <div id="container2">
+	  <div id="leftbar2">
+	  	<!-- TradingView Widget BEGIN -->
+	  	<div class="tradingview-widget-container">
 		  <div id="tradingview_10c7d"></div>
 		  <div class="tradingview-widget-copyright"><a rel="noopener" target="_blank"><span class="blue-text">BNBUSDT</span></a></div>
 		  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
@@ -171,17 +361,17 @@ width:450px;
 		  "hide_legend": true,
 		  "save_image": false,
 		  "container_id": "tradingview_10c7d"
-		}
+		  }
 		  );
 		  </script>
-		</div>
-		<!-- TradingView Widget END -->
+	  	</div>
+		  <!-- TradingView Widget END -->
 
-		</div>
+	  	</div>
 
 
 
-	<div id="rightbar2">
+	  <div id="rightbar2">
 		<!-- TradingView Widget BEGIN -->
 		<div class="tradingview-widget-container">
 		  <div id="tradingview_4374c"></div>
@@ -204,24 +394,23 @@ width:450px;
 		  "hide_legend": true,
 		  "save_image": false,
 		  "container_id": "tradingview_4374c"
-		}
+		 }
 		  );
 		  </script>
 		</div>
 		<!-- TradingView Widget END -->
 
 		</div>
-</div>
+  </div>
 
+<hr color="#2D4BAB" width="900px">
 
-	<hr color="#2D4BAB" width="900px">
-
-<div id="container3">
-	<div id="leftbar3">
+ <div id="container3">
+	 <div id="leftbar3">
 		<!-- TradingView Widget BEGIN -->
-	<div class="tradingview-widget-container">
+	 <div class="tradingview-widget-container">
 	  <div id="tradingview_a3e7d"></div>
-	  <div class="tradingview-widget-copyright"><a href="https://ru.tradingview.com/symbols/XRPUSDTPERP/?exchange=BINANCE" rel="noopener" target="_blank"><span class="blue-text">График XRPUSDTPERP</span></a> от TradingView</div>
+	  <div class="tradingview-widget-copyright"><a  rel="noopener" target="_blank"><span class="blue-text">XRPUSDT</span></a></div>
 	  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 	  <script type="text/javascript">
 	  new TradingView.widget(
@@ -240,118 +429,319 @@ width:450px;
 	  "hide_legend": true,
 	  "save_image": false,
 	  "container_id": "tradingview_a3e7d"
-	}
+	  }
 	  );
 	  </script>
-	</div>
-	<!-- TradingView Widget END -->
+	  </div>
+  	 <!-- TradingView Widget END -->
 
-	</div>
+	  </div>
 
 
-	<div id="leftbar3">
+   	 <div id="leftbar3">
 		<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div id="tradingview_87e26"></div>
-  <div class="tradingview-widget-copyright"><a href="https://ru.tradingview.com/symbols/LTCUSDTPERP/?exchange=BINANCE" rel="noopener" target="_blank"><span class="blue-text">График LTCUSDTPERP</span></a> от TradingView</div>
-  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-  <script type="text/javascript">
-  new TradingView.widget(
-  {
-  "width": 450,
-  "height": 300,
-  "symbol": "BINANCE:LTCUSDTPERP",
-  "interval": "15",
-  "timezone": "Etc/UTC",
-  "theme": "dark",
-  "style": "1",
-  "locale": "ru",
-  "toolbar_bg": "#f1f3f6",
-  "enable_publishing": false,
-  "hide_top_toolbar": true,
-  "hide_legend": true,
-  "save_image": false,
-  "container_id": "tradingview_87e26"
-}
-  );
-  </script>
-</div>
-<!-- TradingView Widget END -->
+    <div class="tradingview-widget-container">
+    <div id="tradingview_87e26"></div>
+    <div class="tradingview-widget-copyright"><a  rel="noopener" target="_blank"><span class="blue-text">LTCUSDT</span></a></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+    new TradingView.widget(
+    {
+    "width": 450,
+    "height": 300,
+    "symbol": "BINANCE:LTCUSDTPERP",
+    "interval": "15",
+    "timezone": "Etc/UTC",
+    "theme": "dark",
+    "style": "1",
+    "locale": "ru",
+    "toolbar_bg": "#f1f3f6",
+    "enable_publishing": false,
+    "hide_top_toolbar": true,
+    "hide_legend": true,
+    "save_image": false,
+    "container_id": "tradingview_87e26"
+    }
+    );
+    </script>
+    </div>
+    <!-- TradingView Widget END -->
+
+	  	</div>
+
+   </div>
+
+<hr color="#2D4BAB" width="900px">
+
+ <div id="container4">
+	  <div id="leftbar4">
+ 		<!-- TradingView Widget BEGIN -->
+   <div class="tradingview-widget-container">
+   <div id="tradingview_dc211"></div>
+   <div class="tradingview-widget-copyright"><a  rel="noopener" target="_blank"><span class="blue-text">BCHUSDT</span></a></div>
+   <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+   <script type="text/javascript">
+   new TradingView.widget(
+   {
+   "width": 450,
+   "height": 300,
+   "symbol": "BINANCE:BCHUSDTPERP",
+   "interval": "15",
+   "timezone": "Etc/UTC",
+   "theme": "dark",
+   "style": "1",
+   "locale": "ru",
+   "toolbar_bg": "#f1f3f6",
+   "enable_publishing": false,
+   "hide_top_toolbar": true,
+   "hide_legend": true,
+   "save_image": false,
+    "container_id": "tradingview_dc211"
+    }
+   );
+    </script>
+    </div>
+    <!-- TradingView Widget END -->
+
+ 	   </div>
+      <div id="rightbar4">
+      	<!-- TradingView Widget BEGIN -->
+     <div class="tradingview-widget-container">
+     <div id="tradingview_b9088"></div>
+     <div class="tradingview-widget-copyright"><a  rel="noopener" target="_blank"><span class="blue-text">EOSUSDT</span></a></div>
+     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+     <script type="text/javascript">
+     new TradingView.widget(
+     {
+     "width": 450,
+    "height": 300,
+    "symbol": "BINANCE:EOSUSDTPERP",
+    "interval": "15",
+    "timezone": "Etc/UTC",
+    "theme": "dark",
+    "style": "1",
+    "locale": "ru",
+    "toolbar_bg": "#f1f3f6",
+    "enable_publishing": false,
+    "hide_top_toolbar": true,
+    "hide_legend": true,
+    "save_image": false,
+    "container_id": "tradingview_b9088"
+   }
+     );
+   </script>
+   </div>
+   <!-- TradingView Widget END →-->
+
+     </div>
+  </div>
+
+<hr color="#2D4BAB" width="900px">
+
+<div id="container5">
+	 <div id="leftbar5">
+		 <!-- TradingView Widget BEGIN -->
+		 <div class="tradingview-widget-container">
+		   <div id="tradingview_72e04"></div>
+		   <div class="tradingview-widget-copyright"><a  rel="noopener" target="_blank"><span class="blue-text">TRXUSDT</span></a></div>
+		   <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+		   <script type="text/javascript">
+		   new TradingView.widget(
+		   {
+		   "width": 450,
+		   "height": 300,
+		   "symbol": "BINANCE:TRXUSDTPERP",
+		   "interval": "15",
+		   "timezone": "Etc/UTC",
+		   "theme": "dark",
+		   "style": "1",
+		   "locale": "ru",
+		   "toolbar_bg": "#f1f3f6",
+		   "enable_publishing": false,
+		   "hide_top_toolbar": true,
+		   "hide_legend": true,
+		   "save_image": false,
+		   "container_id": "tradingview_72e04"
+		 }
+		   );
+		   </script>
+		 </div>
+		 <!-- TradingView Widget END -->
+
 
 		</div>
+		 <div id="rightbar5">
+			 <!-- TradingView Widget BEGIN -->
+	 <div class="tradingview-widget-container">
+	   <div id="tradingview_a45c3"></div>
+	   <div class="tradingview-widget-copyright"><a  rel="noopener" target="_blank"><span class="blue-text">ETCUSDT</span></a></div>
+	   <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+	   <script type="text/javascript">
+	   new TradingView.widget(
+	   {
+	   "width": 450,
+	   "height": 300,
+	   "symbol": "BINANCE:ETCUSDTPERP",
+	   "interval": "15",
+	   "timezone": "Etc/UTC",
+	   "theme": "dark",
+	   "style": "1",
+	   "locale": "ru",
+	   "toolbar_bg": "#f1f3f6",
+	   "enable_publishing": false,
+	   "hide_top_toolbar": true,
+	   "hide_legend": true,
+	   "save_image": false,
+	   "container_id": "tradingview_a45c3"
+	 }
+	   );
+	   </script>
+	 </div>
+	 <!-- TradingView Widget END →-->
 
-</div>
 
-	<hr color="#2D4BAB" width="900px">
+		</div>
+ </div>
 
-<div id="container4">
-	<div id="leftbar4">
-		<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div id="tradingview_dc211"></div>
-  <div class="tradingview-widget-copyright"><a href="https://ru.tradingview.com/symbols/BCHUSDTPERP/?exchange=BINANCE" rel="noopener" target="_blank"><span class="blue-text">График BCHUSDTPERP</span></a> от TradingView</div>
-  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-  <script type="text/javascript">
-  new TradingView.widget(
-  {
-  "width": 450,
-  "height": 300,
-  "symbol": "BINANCE:BCHUSDTPERP",
-  "interval": "15",
-  "timezone": "Etc/UTC",
-  "theme": "dark",
-  "style": "1",
-  "locale": "ru",
-  "toolbar_bg": "#f1f3f6",
-  "enable_publishing": false,
-  "hide_top_toolbar": true,
-  "hide_legend": true,
-  "save_image": false,
-  "container_id": "tradingview_dc211"
-}
-  );
-  </script>
-</div>
-<!-- TradingView Widget END -->
+<hr color="#2D4BAB" width="900px">
 
-	</div>
-<div id="rightbar4">
-	<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div id="tradingview_b9088"></div>
-  <div class="tradingview-widget-copyright"><a href="https://ru.tradingview.com/symbols/EOSUSDTPERP/?exchange=BINANCE" rel="noopener" target="_blank"><span class="blue-text">График EOSUSDTPERP</span></a> от TradingView</div>
-  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-  <script type="text/javascript">
-  new TradingView.widget(
-  {
-  "width": 450,
-  "height": 300,
-  "symbol": "BINANCE:EOSUSDTPERP",
-  "interval": "15",
-  "timezone": "Etc/UTC",
-  "theme": "dark",
-  "style": "1",
-  "locale": "ru",
-  "toolbar_bg": "#f1f3f6",
-  "enable_publishing": false,
-  "hide_top_toolbar": true,
-  "hide_legend": true,
-  "save_image": false,
-  "container_id": "tradingview_b9088"
-}
-  );
-  </script>
-</div>
-<!-- TradingView Widget END →-->
+<div id="container6">
+	 <div id="leftbar6">
+		 <!-- TradingView Widget BEGIN -->
+		 <div class="tradingview-widget-container">
+		   <div id="tradingview_8d90b"></div>
+		   <div class="tradingview-widget-copyright"><a  rel="noopener" target="_blank"><span class="blue-text">LINKUSDT</span></a></div>
+			 <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+		   <script type="text/javascript">
+		   new TradingView.widget(
+		   {
+		   "width": 450,
+		   "height": 300,
+		   "symbol": "BINANCE:LINKUSDTPERP",
+		   "interval": "15",
+		   "timezone": "Etc/UTC",
+		   "theme": "dark",
+		   "style": "1",
+		   "locale": "ru",
+		   "toolbar_bg": "#f1f3f6",
+		   "enable_publishing": false,
+		   "hide_top_toolbar": true,
+		   "hide_legend": true,
+		   "save_image": false,
+		   "container_id": "tradingview_8d90b"
+		 }
+		   );
+		   </script>
+		 </div>
+		 <!-- TradingView Widget END -->
 
-</div>
-</div>
 
-	<hr color="#2D4BAB" width="900px">
+		</div>
+		 <div id="rightbar6">
+			 <!-- TradingView Widget BEGIN -->
+	 <div class="tradingview-widget-container">
+	   <div id="tradingview_c9331"></div>
+	   <div class="tradingview-widget-copyright"><a  rel="noopener" target="_blank"><span class="blue-text">XLMUSDT</span></a></div>
+	   <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+	   <script type="text/javascript">
+	   new TradingView.widget(
+	   {
+	   "width": 450,
+	   "height": 300,
+	   "symbol": "BINANCE:XLMUSDTPERP",
+	   "interval": "15",
+	   "timezone": "Etc/UTC",
+	   "theme": "dark",
+	   "style": "1",
+	   "locale": "ru",
+	   "toolbar_bg": "#f1f3f6",
+	   "enable_publishing": false,
+	   "hide_top_toolbar": true,
+	   "hide_legend": true,
+	   "save_image": false,
+	   "container_id": "tradingview_c9331"
+	 }
+	   );
+	   </script>
+	 </div>
+	 <!-- TradingView Widget END →-->
+
+
+		</div>
+ </div>
+
+<hr color="#2D4BAB" width="900px">
+
+<div id="container7">
+	 <div id="leftbar7">
+		 <!-- TradingView Widget BEGIN -->
+		 <div class="tradingview-widget-container">
+		   <div id="tradingview_a963d"></div>
+		   <div class="tradingview-widget-copyright"><a  rel="noopener" target="_blank"><span class="blue-text">DASHUSDT</span></a></div>
+			 <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+		   <script type="text/javascript">
+		   new TradingView.widget(
+		   {
+		   "width": 450,
+		   "height": 300,
+		   "symbol": "BINANCE:DASHUSDTPERP",
+		   "interval": "15",
+		   "timezone": "Etc/UTC",
+		   "theme": "dark",
+		   "style": "1",
+		   "locale": "ru",
+		   "toolbar_bg": "#f1f3f6",
+		   "enable_publishing": false,
+		   "hide_top_toolbar": true,
+		   "hide_legend": true,
+		   "save_image": false,
+		   "container_id": "tradingview_a963d"
+		 }
+		   );
+		   </script>
+		 </div>
+		 <!-- TradingView Widget END -->
+
+
+		</div>
+		 <div id="rightbar7">
+			 <!-- TradingView Widget BEGIN -->
+	 <div class="tradingview-widget-container">
+	   <div id="tradingview_e672d"></div>
+	   <div class="tradingview-widget-copyright"><a  rel="noopener" target="_blank"><span class="blue-text">DOGEUSDT</span></a></div>
+	   <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+	   <script type="text/javascript">
+	   new TradingView.widget(
+	   {
+	   "width": 450,
+	   "height": 300,
+	   "symbol": "BINANCE:DOGEUSDTPERP",
+	   "interval": "15",
+	   "timezone": "Etc/UTC",
+	   "theme": "dark",
+	   "style": "1",
+	   "locale": "ru",
+	   "toolbar_bg": "#f1f3f6",
+	   "enable_publishing": false,
+	   "hide_top_toolbar": true,
+	   "hide_legend": true,
+	   "save_image": false,
+	   "container_id": "tradingview_e672d"
+	 }
+	   );
+	   </script>
+	 </div>
+	 <!-- TradingView Widget END →-->
+
+
+		</div>
+ </div>
+
+<hr color="#2D4BAB" width="900px">
 
 <div id="chart">
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
+ <!-- TradingView Widget BEGIN -->
+ <div class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget"></div>
 	<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
   {
@@ -362,9 +752,9 @@ width:450px;
   "displayCurrency": "USD",
   "colorTheme": "dark",
   "locale": "ru"
-}
+ }
   </script>
-</div>
+ </div>
 <!-- TradingView Widget END -->
 </div>
 </body>
