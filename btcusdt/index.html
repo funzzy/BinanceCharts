@@ -1,17 +1,162 @@
-<!DOCTYPE HTML>
-<html>
- <head>
-  <meta charset="utf-8">
-  <title>Тег HR</title>
- </head>
- <body>
+<!DOCTYPE html>
+<html lang="ru">
+ <link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
 
- <hr>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh 
-  euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. Ut wisis enim 
-  ad minim veniam, quis nostrud exerci tution ullamcorper suscipit lobortis nisl 
-  ut aliquip ex ea commodo consequat.</p>
- <hr> 
+	<title>Фьючерсы 15мин ОБЗОР</title>
+ <!--
+ 00___CONTAINER_pairs___00
 
- </body>
+ container1
+ BTC
+ ETH
+
+ container2
+ BNB
+ ADA
+
+ container3
+ XRP
+ LTC
+
+ container4
+ BCH
+ EOS
+
+ container5
+ TRX
+ ETC
+
+ container6
+ LINK
+ XLM
+
+ container7
+ DASH
+ DOGE
+
+ container8
+ DOTU
+ UNI
+
+ container9
+ SXP
+ SUSHI
+
+ container10
+ FTM
+ NEO
+
+ container11
+ ONT
+ AAVE
+
+ container12
+ IOST
+ MKR
+
+ container13
+ AVAX
+ IOTA
+
+-->
+<style>
+
+	 body{
+	   background-color: #171B26; /* Цвет фона веб-страницы */
+	   }
+
+	 #chart
+	 {
+	 width:900px;
+	 margin:0 auto;
+	 background: url("faux-columns.png") repeat-y;
+	 overflow: hidden;
+	 }
+
+	#container1 {
+ width:900px;
+ margin:0 auto;
+ background: url("faux-columns.png") repeat-y;
+ overflow: hidden;
+ }
+ #leftbar1 {
+ float:left;
+ width:450px;
+ }
+ #rightbar1 {
+ float:left;
+ width:450px;width="число"
+ }
+
+</style>
+
+</head>
+
+<body>
+
+	<div id="container1">
+	  <div id="leftbar1">
+      <!-- TradingView Widget BEGIN -->
+   <div class="tradingview-widget-container">
+   <div id="tradingview_8b641"></div>
+   <div class="tradingview-widget-copyright"><a href="https://ru.tradingview.com/symbols/BTCUSDTPERP/?exchange=BINANCE" rel="noopener" target="_blank"><span class="blue-text">График BTCUSDTPERP</span></a> от TradingView</div>
+   <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+   <script type="text/javascript">
+   new TradingView.widget(
+   {
+   "width": 450,
+   "height": 450,
+   "symbol": "BINANCE:BTCUSDTPERP",
+   "interval": "15",
+   "timezone": "Europe/Moscow",
+   "theme": "dark",
+   "style": "1",
+   "locale": "ru",
+   "toolbar_bg": "#f1f3f6",
+   "enable_publishing": false,
+   "hide_top_toolbar": true,
+   "hide_legend": true,
+   "save_image": false,
+   "container_id": "tradingview_8b641"
+    }
+    );
+    </script>
+    </div>
+    <!-- TradingView Widget END -->
+	     </div>
+
+		    <div id="rightbar1">
+          <!-- TradingView Widget BEGIN -->
+     <div class="tradingview-widget-container">
+     <div id="tradingview_2d7f0"></div>
+     <div class="tradingview-widget-copyright"><a href="https://ru.tradingview.com/symbols/BTCUSDTPERP/?exchange=BINANCE" rel="noopener" target="_blank"><span class="blue-text">График BTCUSDTPERP</span></a> от TradingView</div>
+     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+     <script type="text/javascript">
+    new TradingView.widget(
+     {
+     "width": 450,
+     "height": 450,
+     "symbol": "BINANCE:BTCUSDTPERP",
+     "interval": "1",
+     "timezone": "Europe/Moscow",
+     "theme": "dark",
+     "style": "1",
+     "locale": "ru",
+    "toolbar_bg": "#f1f3f6",
+     "enable_publishing": false,
+     "hide_top_toolbar": true,
+     "hide_legend": true,
+     "save_image": false,
+     "container_id": "tradingview_2d7f0"
+      }
+       );
+      </script>
+        </div>
+        <!-- TradingView Widget END -->
+	           	  </div>
+      	</div>
+
+<hr color="#2D4BAB" width="900px">
+
+</body>
 </html>
