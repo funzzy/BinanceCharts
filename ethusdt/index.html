@@ -33,6 +33,21 @@
  width:450px;width="число"
  }
 
+ #container2 {
+ width:900px;
+ margin:0 auto;
+ background: url("faux-columns.png") repeat-y;
+ overflow: hidden;
+ }
+ #leftbar2 {
+ float:left;
+ width:450px;
+ }
+ #rightbar2 {
+ float:left;
+ width:450px;width="число"
+ }
+
 </style>
 
 </head>
@@ -102,7 +117,72 @@
       	</div>
 
 <hr color="#2D4BAB" width="900px">
-<div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/" ><span class="blue-text">--НАЗАД--</span></a></div>
+
+<div id="container2">
+  <div id="leftbar2">
+      <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+    <div id="tradingview_2be03"></div>
+    <div class="tradingview-widget-copyright"><a  rel="noopener" target="_blank"><span class="blue-text">ETHUSDT</span> 1h</a></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+    new TradingView.widget(
+    {
+    "width": 450,
+    "height": 450,
+    "symbol": "BINANCE:ETHUSDTPERP",
+    "interval": "60",
+    "timezone": "Europe/Moscow",
+    "theme": "dark",
+    "style": "1",
+    "locale": "ru",
+    "toolbar_bg": "#f1f3f6",
+    "enable_publishing": false,
+    "hide_top_toolbar": true,
+    "hide_legend": true,
+    "save_image": false,
+    "container_id": "tradingview_2be03"
+        }
+          );
+             </script>
+            </div>
+            <!-- TradingView Widget END -->
+     </div>
+
+      <div id="rightbar2">
+        <!-- TradingView Widget BEGIN -->
+   <div class="tradingview-widget-container">
+   <div id="tradingview_dfc09"></div>
+   <div class="tradingview-widget-copyright"><a rel="noopener" target="_blank"><span class="blue-text">ETHUSDT</span> 1d </a></div>
+   <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+   <script type="text/javascript">
+  new TradingView.widget(
+   {
+   "width": 450,
+   "height": 450,
+   "symbol": "BINANCE:ETHUSDTPERP",
+   "interval": "D",
+   "timezone": "Europe/Moscow",
+   "theme": "dark",
+   "style": "1",
+   "locale": "ru",
+  "toolbar_bg": "#f1f3f6",
+   "enable_publishing": false,
+   "hide_top_toolbar": true,
+   "hide_legend": true,
+   "save_image": false,
+   "container_id": "tradingview_dfc09"
+    }
+     );
+    </script>
+      </div>
+      <!-- TradingView Widget END -->
+              </div>
+      </div>
+
+<hr color="#2D4BAB" width="900px">
+
+<div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/" ><span class="blue-text"><h3>--НАЗАД--</h3></span></a></div>
 
 </body>
 </html>
