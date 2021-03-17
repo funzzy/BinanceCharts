@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
+
+	<title>Фьючерсы 15мин Топ 25</title>
+
+<style>
+
+	 body{
+	   background-color: #171B26; /* Цвет фона веб-страницы светлый-#F8F9FD темный-#171B26 */
+	   }
+
+     .Menu{
+                 width:900px; /* ширина блока */
+                 height: auto; /* высота блока */
+                 background: #191919; /* фон блока #191919-темный #F7F7F7-светлый*/
+                 border-radius: 5px; /* закругленные углы блока */
+                 margin: 1% auto; /* отступ сверху и выравнивание по середине */
+                 box-shadow: 2px 2px 4px 0px #000000; /* тень блока */
+     }
+
+	 #chart
+	 {
+	 width:900px;
+	 margin:0 auto;
+	 overflow: hidden;
+	 }
+
+   #container0 {
+  width:900px;
+  margin:0 auto;
+  overflow: hidden;
+  }
+  #bar0 {
+  float:left;
+  width:150px;
+  }
+  #bar1 {
+  float:left;
+  width:150px;
+  }
+  #bar2 {
+  float:left;
+  width:150px;
+  }
+  #bar3 {
+  float:left;
+  width:150px;
+  }
+  #bar4 {
+  float:left;
+  width:150px;
+  }
+  #bar5 {
+  float:left;
+  width:150px;
+  }
+
+  #container01 {
+ width:750px;
+ margin:0 auto;
+ overflow: hidden;
+ }
+ #bar0 {
+ float:left;
+ width:150px;
+ }
+ #bar1 {
+ float:left;
+ width:150px;
+ }
+ #bar2 {
+ float:left;
+ width:150px;
+ }
+ #bar3 {
+ float:left;
+ width:150px;
+ }
+ #bar4 {
+ float:left;
+ width:150px;
+ }
+ #bar5 {
+ float:left;
+ width:150px;
+ }
+
+	#container1 {
+ width:1288px;
+ margin:0 auto;
+ overflow: hidden;
+ }
+ #leftbar1 {
+ float:left;
+ width:322px;
+ }
+ #centerbar1 {
+ float:left;
+ width:322px;
+ }
+ #rightbar1 {
+ float:left;
+ width:322px;
+ }
+ #rightbar2 {
+ float:left;
+ width:322px;
+ }
+
+</style>
+
+</head>
+
+<body>
+<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script> <!-- подключаем библиотеку -->
+<script>
+
+let grname1="BTC"; //задаем имена монет Binance на фьючерсах
+let grname2="ETH";
+let grname3="BNB";
+let grname4="ADA";
+let grname5="LTC";
+let grname6="EOS";
+let grname7="XRP";
+let grname8="BCH";
+let grname9="DOT";
+let grname10="UNI";//-------------top10
+let grname11="LINK";
+let grname12="TRX";
+let grname13="DOGE";
+let grname14="VET";
+let grname15="ETC";
+let grname16="CHZ";
+let grname17="XLM";
+let grname18="ENJ";
+let grname19="ICX";
+let grname20="DASH";
+let grname21="HT";
+let grname22="AAVE";
+let grname23="XMR";
+let grname24="NEO";
+let grname25="XEM";
+let grname26="WBTC";
+let grname27="THETA";
+let grname28="ATOM";
+let grname29="CRO";
+let grname30="MIOTA";
+let grname31="SOL";
+let grname32="BSV";
+let grname33="LUNA";
+let grname34="XTZ";
+let grname35="FTT";
+let grname36="EGLD";
+let grname37="SNX";
+let grname38="ALGO";
+let grname39="FIL";
+let grname40="GRT";
+let grname41="COMP";
+let grname42="SUSHI";
+let grname43="MKR";
+let grname44="AVAX";
+let grname45="KSM";
+let grname46="DCR";
+let grname47="LEO";
+let grname48="CAKE";
+let grname49="ZEC";
+let grname50="YFI";
+let grname51="VGX";
+let grname52="RUNE";
+let grname53="NEAR";
+let grname54="RVN";
+let grname55="ZIL";
+
+
+
+let width=322; // ширина
+let height=322; // высота
+let time_zone="Europe/Moscow"; // частовой пояс "Europe/Moscow"
+let theme_color="dark"; // выбор темы "dark" "light"
+let timeframe="15"; //задаем таймфрейм 1-3-5-15-30-60-120-180-240-D-W
+let enable_publishing_setting=false; // публикации
+let hide_top_toolbar_setting=true; // скрыть верхнюю часть
+let hide_legend_setting=true; // скрыть описание
+let withdateranges_setting=true; // показать нижнюю часть
+let save_image_setting=false; // кнопка сохранить картинку на верхнем меню
+let hide_side_toolbar_setting=false; // инструменты рисования
+let style_setting="1"; // стиль 0-бары 1-японские свечи 2-линия 3-область 4-ренко 5-каги 6-крестики-нолики 7-линейный прорыв 8-хейкен аши 9-пустые свечи
+let toolbar_bg_setting="#f1f3f6"; //
+let locale="ru"; // локализация
+
+</script>
+
+<script>
+
+  function Graph(name) {
+    this.name = name;
+
+    this.builder = function() {
+
+
+      new TradingView.widget(
+        {
+          "width": width,
+          "height": height,
+          "symbol": "BINANCE:"+this.name+"USDTPERP",
+          "interval": timeframe,
+          "timezone": "Europe/Moscow",
+          "theme": theme_color,
+          "style": style_setting,
+          "locale": "ru",
+          "toolbar_bg": false,
+          "enable_publishing": false,
+          "hide_top_toolbar": true,
+          "hide_legend": true,
+          "withdateranges": false,
+          "hide_side_toolbar": true,
+          "save_image": false,});
+
+
+          }
+    }
+
+
+
+let graph1 = new Graph(grname1);
+let graph2 = new Graph(grname2);
+let graph3 = new Graph(grname3);
+let graph4 = new Graph(grname4);
+let graph5 = new Graph(grname5);
+let graph6 = new Graph(grname6);
+let graph7 = new Graph(grname7);
+let graph8 = new Graph(grname8);
+let graph9 = new Graph(grname9);
+let graph10 = new Graph(grname10);
+let graph11 = new Graph(grname11);
+let graph12 = new Graph(grname12);
+let graph13 = new Graph(grname13);
+let graph14 = new Graph(grname14);
+let graph15 = new Graph(grname15);
+let graph16 = new Graph(grname16);
+let graph17 = new Graph(grname17);
+let graph18 = new Graph(grname18);
+let graph19 = new Graph(grname19);
+let graph20 = new Graph(grname20);
+let graph21 = new Graph(grname21);
+let graph22 = new Graph(grname22);
+let graph23 = new Graph(grname23);
+let graph24 = new Graph(grname24);
+let graph25 = new Graph(grname25);
+let graph26 = new Graph(grname26);
+let graph27 = new Graph(grname27);
+let graph28 = new Graph(grname28);
+let graph29 = new Graph(grname29);
+let graph30 = new Graph(grname30);
+let graph31 = new Graph(grname31);
+let graph32 = new Graph(grname32);
+let graph33 = new Graph(grname33);
+let graph34 = new Graph(grname34);
+let graph35 = new Graph(grname35);
+let graph36 = new Graph(grname36);
+let graph37 = new Graph(grname37);
+let graph38 = new Graph(grname38);
+let graph39 = new Graph(grname39);
+let graph40 = new Graph(grname40);
+let graph41 = new Graph(grname41);
+let graph42 = new Graph(grname42);
+let graph43 = new Graph(grname43);
+let graph44 = new Graph(grname44);
+let graph45 = new Graph(grname45);
+let graph46 = new Graph(grname46);
+let graph47 = new Graph(grname47);
+let graph48 = new Graph(grname48);
+let graph49 = new Graph(grname49);
+let graph50 = new Graph(grname50);
+let graph51 = new Graph(grname51);
+let graph52 = new Graph(grname52);
+let graph53 = new Graph(grname53);
+let graph54 = new Graph(grname54);
+
+
+
+
+       </script>
+<div class="Menu">
+       <div id="container0">
+         <div id="bar0">
+           <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/top/25/4/"><span class="blue-text">Темная тема</span></a></div>
+           </div>
+           <div id="bar1">
+             <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/top/25/w/"><span class="blue-text">2 колонки</span></a></div>
+             </div>
+             <div id="bar2">
+               <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/top/25/3/w/"><span class="blue-text">3 колонки</span></a></div>
+               </div>
+               <div id="bar3">
+                 <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/compare/2/w/"><span class="blue-text">Сравнение</span></a></div>
+                 </div>
+                 <div id="bar4">
+                   <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/4/w/"><span class="blue-text">ТОП 10</span></a></div>
+                   </div>
+                   <div id="bar5">
+                     <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/top/50/4/w/"><span class="blue-text">ТОП 50</span></a></div>
+                     </div>
+
+       </div>
+       <hr color="#6C7695" width="850px">
+
+       <div id="container01">
+         <div id="bar0">
+           <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/top/25/1m/4/w/"><span class="blue-text">1 минута</span></a></div>
+           </div>
+
+             <div id="bar2">
+               <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/top/25/1h/4/w/"><span class="blue-text">1 час</span></a></div>
+               </div>
+               <div id="bar3">
+                 <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/top/25/4h/4/w/"><span class="blue-text">4 часа</span></a></div>
+                 </div>
+                 <div id="bar4">
+                   <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/top/25/1d/4/w/"><span class="blue-text">1 день</span></a></div>
+                   </div>
+                   <div id="bar5">
+                     <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/top/25/1w/4/w/"><span class="blue-text">1 неделя</span></a></div>
+                     </div>
+
+       </div>
+</div>
+
+
+<div id="container1">
+      <div id="leftbar1">
+          <script> graph1.builder();</script>
+          <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/BTC/w/"><span class="blue-text">BTCUSDT</span> 15m</a></div>
+        </div>
+      <div id="centerbar1">
+          <script> graph2.builder();</script>
+          <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/ETH/w/"><span class="blue-text">ETHUSDT</span> 15m</a></div>
+        </div>
+        <div id="rightbar1">
+            <script> graph3.builder();</script>
+            <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/BNB/w/"><span class="blue-text">BNBUSDT</span> 15m</a></div>
+          </div>
+          <div id="rightbar2">
+              <script> graph4.builder();</script>
+              <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/ADA/w/"><span class="blue-text">ADAUSDT</span> 15m</a></div>
+            </div>
+    </div>
+<hr color="#2D4BAB" width="1200px"> <!-- разделительная полоса -->
+
+<div id="container1">
+        <div id="leftbar1">
+            <script> graph5.builder();</script>
+            <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/LTC/w/"><span class="blue-text">LTCUSDT</span> 15m</a></div>
+          </div>
+        <div id="centerbar1">
+            <script> graph6.builder();</script>
+            <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/EOS/w/"><span class="blue-text">EOSUSDT</span> 15m</a></div>
+          </div>
+          <div id="rightbar1">
+              <script> graph7.builder();</script>
+              <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/XRP/w/"><span class="blue-text">XRPUSDT</span> 15m</a></div>
+            </div>
+          <div id="rightbar2">
+              <script> graph8.builder();</script>
+              <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/BCH/w/"><span class="blue-text">BCHUSDT</span> 15m</a></div>
+            </div>
+    </div>
+<hr color="#2D4BAB" width="1200px"> <!-- разделительная полоса -->
+
+<div id="container1">
+        <div id="leftbar1">
+          <script> graph9.builder();</script>
+          <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/DOT/w/"><span class="blue-text">DOTUSDT</span>15m</a></div>
+          </div>
+        <div id="centerbar1">
+          <script> graph10.builder();</script>
+          <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/UNI/w/"><span class="blue-text">UNIUSDT</span>15m</a></div>
+          </div>
+          <div id="rightbar1">
+            <script> graph11.builder();</script>
+            <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/LINK/w/"><span class="blue-text">LINKUSDT</span>15m</a></div>
+            </div>
+          <div id="rightbar2">
+            <script> graph12.builder();</script>
+            <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/TRX/w/"><span class="blue-text">TRXUSDT</span>15m</a></div>
+            </div>
+    </div>
+<hr color="#2D4BAB" width="1200px"> <!-- разделительная полоса -->
+
+<div id="container1">
+        <div id="leftbar1">
+          <script> graph13.builder();</script>
+          <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/DOGE/w/"><span class="blue-text">DOGEUSDT</span>15m</a></div>
+          </div>
+        <div id="centerbar1">
+          <script> graph14.builder();</script>
+          <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/VET/w/"><span class="blue-text">VETUSDT</span>15m</a></div>
+          </div>
+          <div id="rightbar1">
+            <script> graph15.builder();</script>
+            <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/ETC/w/"><span class="blue-text">ETCUSDT</span>15m</a></div>
+            </div>
+          <div id="rightbar2">
+            <script> graph16.builder();</script>
+            <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/CHZ/w/"><span class="blue-text">CHZUSDT</span>15m</a></div>
+            </div>
+    </div>
+<hr color="#2D4BAB" width="1200px"> <!-- разделительная полоса -->
+
+<div id="container1">
+        <div id="leftbar1">
+          <script> graph17.builder();</script>
+          <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/XLM/w/"><span class="blue-text">XLNUSDT</span>15m</a></div>
+          </div>
+        <div id="centerbar1">
+          <script> graph18.builder();</script>
+          <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/ENJ/w/"><span class="blue-text">ENJUSDT</span>15m</a></div>
+          </div>
+          <div id="rightbar1">
+            <script> graph19.builder();</script>
+            <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/ICX/w/"><span class="blue-text">ICXUSDT</span>15m</a></div>
+            </div>
+          <div id="rightbar2">
+            <script> graph20.builder();</script>
+            <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/DASH/w/"><span class="blue-text">DASHUSDT</span>15m</a></div>
+            </div>
+    </div>
+<hr color="#2D4BAB" width="1200px"> <!-- разделительная полоса -->
+
+<div id="container1">
+        <div id="leftbar1">
+          <script> graph21.builder();</script>
+          <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/HT/w/"><span class="blue-text">HTUSDT</span>15m</a></div>
+          </div>
+        <div id="centerbar1">
+          <script> graph22.builder();</script>
+          <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/AAVE/w/"><span class="blue-text">AAVEUSDT</span>15m</a></div>
+          </div>
+          <div id="rightbar1">
+            <script> graph23.builder();</script>
+            <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/XMR/"><span class="blue-text">XMRUSDT</span>15m</a></div>
+            </div>
+          <div id="rightbar2">
+            <script> graph24.builder();</script>
+            <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/NEO/w/"><span class="blue-text">NEOUSDT</span>15m</a></div>
+            </div>
+    </div>
+<hr color="#2D4BAB" width="1200px"> <!-- разделительная полоса -->
+
+<div id="chart">
+ <!-- TradingView Widget BEGIN -->
+ <div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+	<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+  {
+  "width": "900",
+  "height": "500",
+  "defaultColumn": "overview",
+  "screener_type": "crypto_mkt",
+  "displayCurrency": "USD",
+  "colorTheme": "dark",
+  "locale": "ru"
+ }
+  </script>
+ </div>
+<!-- TradingView Widget END -->
+</div>
+</body>
+</html>
