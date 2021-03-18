@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
+
+	<title>Фьючерсы KAVAUSDT</title>
+
+<style>
+
+	 body{
+	   background-color: #F8F9FD; /* Цвет фона веб-страницы светлый-#F8F9FD темный-#171B26 */
+	   }
+
+     .Menu{
+                 width:900px; /* ширина блока */
+                 height: auto; /* высота блока */
+                 background: #F7F7F7; /* фон блока #191919-темный #F7F7F7-светлый*/
+                 border-radius: 5px; /* закругленные углы блока */
+                 margin: 1% auto; /* отступ сверху и выравнивание по середине */
+                 box-shadow: 2px 2px 4px 0px #000000; /* тень блока */
+     }
+
+   #container0 {
+  width:900px;
+  margin:0 auto;
+  overflow: hidden;
+  }
+  #bar0 {
+  float:left;
+  width:150px;
+  }
+  #bar1 {
+  float:left;
+  width:150px;
+  }
+
+	#container1 {
+ width:1290px;
+ margin:0 auto;
+ overflow: hidden;
+ }
+ #leftbar1 {
+ float:left;
+ width:430px;
+ }
+ #centerbar1 {
+ float:left;
+ width:430px;
+ }
+ #rightbar1 {
+ float:left;
+ width:430px;
+ }
+
+</style>
+
+</head>
+
+<body>
+<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script> <!-- подключаем библиотеку -->
+<script>
+
+let grname1="KAVA"; //задаем имена монет Binance на фьючерсах
+let tf1m="1";
+let tf15="15";
+let tf1h="60";
+let tf4h="240";
+let tf1d="D";
+let tf1w="W";
+
+
+
+let width=430; // ширина
+let height=430; // высота
+let time_zone="Europe/Moscow"; // частовой пояс "Europe/Moscow"
+let theme_color="light"; // выбор темы "dark" "light"
+let timeframe="15"; //задаем таймфрейм 1-3-5-15-30-60-120-180-240-D-W
+let enable_publishing_setting=false; // публикации
+let hide_top_toolbar_setting=true; // скрыть верхнюю часть
+let hide_legend_setting=true; // скрыть описание
+let withdateranges_setting=true; // показать нижнюю часть
+let save_image_setting=false; // кнопка сохранить картинку на верхнем меню
+let hide_side_toolbar_setting=false; // инструменты рисования
+let style_setting="1"; // стиль 0-бары 1-японские свечи 2-линия 3-область 4-ренко 5-каги 6-крестики-нолики 7-линейный прорыв 8-хейкен аши 9-пустые свечи
+let toolbar_bg_setting="#f1f3f6"; //
+let locale="ru"; // локализация
+
+</script>
+
+<script>
+
+  function Graph(name,tf) {
+    this.name = name;
+    this.tf = tf;
+
+    this.builder = function() {
+
+
+      new TradingView.widget(
+        {
+          "width": width,
+          "height": height,
+          "symbol": "BINANCE:"+this.name+"USDTPERP",
+          "interval": this.tf,
+          "timezone": "Europe/Moscow",
+          "theme": theme_color,
+          "style": style_setting,
+          "locale": "ru",
+          "toolbar_bg": false,
+          "enable_publishing": false,
+          "hide_top_toolbar": true,
+          "hide_legend": true,
+          "withdateranges": false,
+          "hide_side_toolbar": true,
+          "save_image": false,});
+
+
+          }
+    }
+
+
+
+let graph1 = new Graph(grname1,tf1m);
+let graph2 = new Graph(grname1,tf15);
+let graph3 = new Graph(grname1,tf1h);
+let graph4 = new Graph(grname1,tf4h);
+let graph5 = new Graph(grname1,tf1d);
+let graph6 = new Graph(grname1,tf1w);
+
+
+
+
+       </script>
+<div class="Menu">
+       <div id="container0">
+         <div id="bar0">
+           <div class="tradingview-widget-copyright"><a href="javascript:history.back()"><span class="blue-text"><b>Назад</b></span></a></div>
+           </div>
+           <div id="bar1">
+             <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/KAVA/3/"><span class="blue-text">Темная тема</span></a></div>
+             </div>
+             <div id="bar2">
+               <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/KAVA/w/"><span class="blue-text">2 колонки</span></a></div>
+               </div>
+
+
+
+       </div>
+
+</div>
+
+
+<div id="container1">
+      <div id="leftbar1">
+          <script> graph1.builder();</script>
+          <div class="tradingview-widget-copyright"><a><span class="blue-text"><b>1m</b></span></a></div>
+        </div>
+      <div id="centerbar1">
+          <script> graph2.builder();</script>
+          <div class="tradingview-widget-copyright"><a><span class="blue-text"><b>15m</b></span></a></div>
+        </div>
+        <div id="rightbar1">
+            <script> graph3.builder();</script>
+            <div class="tradingview-widget-copyright"><a><span class="blue-text"><b>1h</b></span></a></div>
+          </div>
+    </div>
+<hr color="#2D4BAB" width="1200px"> <!-- разделительная полоса -->
+
+<div id="container1">
+      <div id="leftbar1">
+        <script> graph4.builder();</script>
+        <div class="tradingview-widget-copyright"><a><span class="blue-text"><b>4h</b></span></a></div>
+        </div>
+      <div id="centerbar1">
+        <script> graph5.builder();</script>
+        <div class="tradingview-widget-copyright"><a><span class="blue-text"><b>1D</b></span></a></div>
+        </div>
+        <div id="rightbar1">
+            <script> graph6.builder();</script>
+            <div class="tradingview-widget-copyright"><a><span class="blue-text"><b>1W</b></span></a></div>
+          </div>
+
+    </div>
+<hr color="#2D4BAB" width="1200px"> <!-- разделительная полоса -->
+
+
+
+
+
+
+</body>
+</html>
