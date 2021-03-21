@@ -1,19 +1,19 @@
-#container1 {
+.container1 {
 overflow: hidden;
 }
-#leftbar1 {
+.leftbar1 {
 float:left;
 width:25%;
 }
-#centerbar1 {
+.centerbar1 {
 float:left;
 width:25%;
 }
-#rightbar1 {
+.rightbar1 {
 float:left;
 width:25%;
 }
-#rightbar2 {
+.rightbar2 {
 float:left;
 width:25%;
 }

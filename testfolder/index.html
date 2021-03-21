@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
  <link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
- <link rel="stylesheet" href="http://www.htmlbook.ru/main.css">
+ <link rel="stylesheet" type="text/css"  href="https://github.com/Alexzionx/BinanceCharts/testfolder/test.css">
+
 
 	<title>Фьючерсы 15мин Топ 25</title>
 
 <style>
-
+ @import url('https://github.com/Alexzionx/BinanceCharts/testfolder/test.css');
 	 body{
 	   background-color: #F8F9FD; /* Цвет фона веб-страницы светлый-#F8F9FD темный-#171B26 */
 	   }
@@ -87,25 +88,7 @@
  width:150px;
  }
 
-	#container1 {
- overflow: hidden;
- }
- #leftbar1 {
- float:left;
- width:25%;
- }
- #centerbar1 {
- float:left;
- width:25%;
- }
- #rightbar1 {
- float:left;
- width:25%;
- }
- #rightbar2 {
- float:left;
- width:25%;
- }
+
 
 </style>
 
@@ -327,20 +310,20 @@ let graph54 = new Graph(grname54);
 </div>
 
 
-<div id="container1">
-      <div id="leftbar1">
+<div class=""="container1">
+      <div class=""="leftbar1">
           <script> graph1.builder();</script>
           <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/BTC/w/"><span class="blue-text">BTCUSDT</span> 15m</a></div>
         </div>
-      <div id="centerbar1">
+      <div class=""="centerbar1">
           <script> graph2.builder();</script>
           <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/ETH/w/"><span class="blue-text">ETHUSDT</span> 15m</a></div>
         </div>
-        <div id="rightbar1">
+        <div class=""="rightbar1">
             <script> graph3.builder();</script>
             <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/BNB/w/"><span class="blue-text">BNBUSDT</span> 15m</a></div>
           </div>
-          <div id="rightbar2">
+          <div class=""="rightbar2">
               <script> graph4.builder();</script>
               <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/ADA/w/"><span class="blue-text">ADAUSDT</span> 15m</a></div>
             </div>
