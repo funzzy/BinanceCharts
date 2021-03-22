@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
  <link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
- <link rel="stylesheet" type="text/css"  href="https://github.com/Alexzionx/BinanceCharts/testfolder/test.css">
+ <link rel="stylesheet" href="https://alexzionx.github.io/BinanceCharts/css/top25_4.css">
 
 
 	<title>Фьючерсы 15мин Топ 25</title>
 
 <style>
- @import url('https://github.com/Alexzionx/BinanceCharts/testfolder/test.css');
+
 	 body{
 	   background-color: #F8F9FD; /* Цвет фона веб-страницы светлый-#F8F9FD темный-#171B26 */
 	   }
@@ -20,75 +20,6 @@
                  margin: 1% auto; /* отступ сверху и выравнивание по середине */
                  box-shadow: 2px 2px 4px 0px #000000; /* тень блока */
      }
-
-	 #chart
-	 {
-	 width:900px;
-	 margin:0 auto;
-	 overflow: hidden;
-	 }
-
-   #container0 {
-  width:900px;
-  margin:0 auto;
-  overflow: hidden;
-  }
-  #bar0 {
-  float:left;
-  width:150px;
-  }
-  #bar1 {
-  float:left;
-  width:150px;
-  }
-  #bar2 {
-  float:left;
-  width:150px;
-  }
-  #bar3 {
-  float:left;
-  width:150px;
-  }
-  #bar4 {
-  float:left;
-  width:150px;
-  }
-  #bar5 {
-  float:left;
-  width:150px;
-  }
-
-  #container01 {
- width:750px;
- margin:0 auto;
- overflow: hidden;
- }
- #bar0 {
- float:left;
- width:150px;
- }
- #bar1 {
- float:left;
- width:150px;
- }
- #bar2 {
- float:left;
- width:150px;
- }
- #bar3 {
- float:left;
- width:150px;
- }
- #bar4 {
- float:left;
- width:150px;
- }
- #bar5 {
- float:left;
- width:150px;
- }
-
-
 
 </style>
 
@@ -310,20 +241,20 @@ let graph54 = new Graph(grname54);
 </div>
 
 
-<div class=""="container1">
-      <div class=""="leftbar1">
+<div id="container1">
+      <div id="leftbar1">
           <script> graph1.builder();</script>
           <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/BTC/w/"><span class="blue-text">BTCUSDT</span> 15m</a></div>
         </div>
-      <div class=""="centerbar1">
+      <div id="centerbar1">
           <script> graph2.builder();</script>
           <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/ETH/w/"><span class="blue-text">ETHUSDT</span> 15m</a></div>
         </div>
-        <div class=""="rightbar1">
+        <div id="rightbar1">
             <script> graph3.builder();</script>
             <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/BNB/w/"><span class="blue-text">BNBUSDT</span> 15m</a></div>
           </div>
-          <div class=""="rightbar2">
+          <div id="rightbar2">
               <script> graph4.builder();</script>
               <div class="tradingview-widget-copyright"><a href="https://alexzionx.github.io/BinanceCharts/coin/ADA/w/"><span class="blue-text">ADAUSDT</span> 15m</a></div>
             </div>
